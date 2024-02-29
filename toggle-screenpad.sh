@@ -8,7 +8,7 @@ port=$(echo "$portPlusSplit" | sed -n 3p)
 #echo "$port"
 
 disabled=$(kscreen-doctor -o | grep --after-context=1 "$port" | sed -n 2p | egrep -o "disabled")
-echo "$disabled"
+#echo "$disabled"
 
 if [ "${disabled}" = "disabled" ]; then
 	disp=$(kscreen-doctor -o | grep --after-context=14 "eDP-1")
