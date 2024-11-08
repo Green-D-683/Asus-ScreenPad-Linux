@@ -54,6 +54,6 @@
           coreutils
         ];};
     };
-    overlays = [(final: prev: (nixpkgs.lib.attrsets.filterAttrs (name: val: name!="default") self.packages.${system}))];
+    overlays.default = [(final: prev: (nixpkgs.lib.attrsets.filterAttrs (name: val: name!="default") self.packages.${system}))];
   } );
 }
